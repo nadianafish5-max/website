@@ -9,7 +9,7 @@
         :root {
             --bg-color: #0b0f19;
             --card-bg: #111827;
-            --accent-color: #ef4444; /* Changed to red for gaming vibe */
+            --accent-color: #ef4444;
             --accent-hover: #dc2626;
             --text-main: #f3f4f6;
             --text-muted: #9ca3af;
@@ -27,6 +27,10 @@
         /* Navigation */
         header {
             background-color: rgba(17, 24, 39, 0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             padding: 20px 5%;
             display: flex;
             justify-content: space-between;
@@ -46,6 +50,7 @@
             text-decoration: none;
             margin-left: 25px;
             font-weight: 600;
+            transition: color 0.2s;
         }
 
         nav a:hover, nav a.active {
@@ -56,9 +61,21 @@
         .hero {
             text-align: center;
             padding: 80px 20px;
+            background: linear-gradient(to bottom, #111827, var(--bg-color));
         }
 
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero h1 { 
+            font-size: 3.5rem; 
+            margin-bottom: 10px; 
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
 
         /* Buttons */
         .btn {
@@ -69,21 +86,72 @@
             text-decoration: none;
             font-weight: bold;
             border-radius: 6px;
-            transition: 0.3s;
+            transition: background-color 0.2s;
         }
 
-        .btn:hover { background-color: var(--accent-hover); }
+        .btn:hover { 
+            background-color: var(--accent-hover); 
+        }
 
-        /* Grid */
-        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); padding: 25px; border-radius: 10px; border: 1px solid #1f2937; }
+        /* Grid Layout */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+        }
 
-        footer { text-align: center; padding: 40px; color: var(--text-muted); }
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .card { 
+            background: var(--card-bg); 
+            padding: 25px; 
+            border-radius: 10px; 
+            border: 1px solid #1f2937;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer { 
+            text-align: center; 
+            padding: 40px; 
+            color: var(--text-muted); 
+            border-top: 1px solid #1f2937;
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
 
+    <!-- Professional Navigation Bar -->
     <header>
         <a href="index.html" class="logo">DOGGY69FF</a>
         <nav>
@@ -92,30 +160,37 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <h1>Welcome to Doggy69ff Hub</h1>
-        <p>Get the best gaming files and stay updated with my latest videos.</p>
+        <p>Get the best gaming files, performance setups, and stay updated with my latest channel videos.</p>
         <a href="https://www.youtube.com/@doggy69ff" target="_blank" class="btn">Subscribe on YouTube</a>
     </section>
 
+    <!-- Main Content Grid -->
     <div class="container">
-        <h2 style="border-left: 4px solid var(--accent-color); padding-left: 15px;">Latest Downloads</h2>
+        <h2 class="section-title">Latest Featured Downloads</h2>
         <div class="grid">
             <div class="card">
-                <h3>Gameplay Config</h3>
-                <p>My personal sensitivity and graphics settings.</p>
-                <a href="#" class="btn">Download</a>
+                <div>
+                    <h3>Gameplay Config</h3>
+                    <p>My personal sensitivity and graphics settings for smoother performance.</p>
+                </div>
+                <a href="downloads.html" class="btn" style="margin-top: 20px;">View Download</a>
             </div>
             <div class="card">
-                <h3>Custom HUD</h3>
-                <p>The layout I use in my latest videos.</p>
-                <a href="#" class="btn">Download</a>
+                <div>
+                    <h3>Custom HUD</h3>
+                    <p>The layout and control configuration I use in my latest videos.</p>
+                </div>
+                <a href="downloads.html" class="btn" style="margin-top: 20px;">View Download</a>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Doggy69ff. All Rights Reserved.</p>
+        <p>&copy; 2026 Doggy69ff. All Rights Reserved. Hosted on GitHub Pages.</p>
     </footer>
 
 </body>
