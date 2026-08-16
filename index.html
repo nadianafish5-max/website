@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official Creator Portal for Doggy69ff. Watch the latest YouTube videos, access exclusive game files, and download custom configurations.">
-    <title>Doggy69ff | Official Creator Portal & Videos</title>
+    <meta name="description" content="Official Creator Portal for Doggy69ff. Watch the latest YouTube videos, explore our blog articles, and download custom game configurations.">
+    <title>Doggy69ff | Official Creator Portal & Blog</title>
     <style>
         :root {
             --bg-deep: #05070a;
@@ -169,7 +169,7 @@
             margin-bottom: 40px;
         }
 
-        /* Video Showcase Section (Embedded Player) */
+        /* Embedded YouTube Video Showcase Section */
         .video-container {
             max-width: 1000px;
             margin: 20px auto 60px auto;
@@ -287,7 +287,7 @@
             color: var(--text-secondary);
         }
 
-        .btn-download {
+        .btn-card-link {
             background-color: var(--bg-surface);
             color: var(--text-primary);
             border: 1px solid var(--border);
@@ -299,7 +299,7 @@
             transition: all 0.2s ease;
         }
 
-        .card:hover .btn-download {
+        .card:hover .btn-card-link {
             background-color: var(--accent);
             border-color: var(--accent);
             color: white;
@@ -359,7 +359,7 @@
 
     <!-- Notification Bar -->
     <div class="announcement-bar">
-        ⚡ NEW VIDEO DROPPED! Check out the updated configuration layout on YouTube. <a href="https://www.youtube.com/@doggy69ff" target="_blank">Watch Now &rarr;</a>
+        ⚡ NEW VIDEO DROPPED! Explore individual video pages, patch notes, and blog breakdowns. <a href="downloads.html">Get Files &rarr;</a>
     </div>
 
     <!-- Main Navigation Bar -->
@@ -371,6 +371,7 @@
         <nav>
             <a href="index.html" class="active">Home</a>
             <a href="downloads.html">Downloads</a>
+            <a href="blog.html">Blog</a>
             <a href="https://www.youtube.com/@doggy69ff" target="_blank" class="nav-cta">YouTube Channel</a>
         </nav>
     </header>
@@ -378,66 +379,69 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-badge">
-            <span>🔥</span> Official Creator Hub & Resource Center
+            <span>🔥</span> Official Creator Hub & Video Archive
         </div>
         <h1>Elevate Your Game with <span>Doggy69ff</span></h1>
-        <p>Access high-performance gameplay setups, custom configurations, and exclusive tools designed for competitive players.</p>
+        <p>Watch highlighted YouTube video breakdowns, read the latest creator blog posts, and access direct configuration downloads.</p>
     </section>
 
-    <!-- Embedded YouTube Video Showcase Section -->
+    <!-- Embedded Featured YouTube Video Showcase -->
     <div class="video-container">
         <div class="video-wrapper">
-            <!-- Replace 'YOUR_VIDEO_ID' with the actual YouTube video ID from your channel (e.g., dQw4w9WgXcQ) -->
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Doggy69ff Latest Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Replace 'YOUR_VIDEO_ID' with your primary highlighted YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Doggy69ff Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
-    <!-- Featured Downloads Section -->
+    <!-- Latest Blog Posts & Video Pages Section -->
     <div class="container">
         <div class="section-header">
             <div class="section-title">
-                <h2>Featured Configurations</h2>
-                <p>Hand-tuned setups used in latest channel videos</p>
+                <h2>Latest Videos & Blog Highlights</h2>
+                <p>Click through to individual video pages and detailed patch note breakdowns</p>
             </div>
         </div>
 
         <div class="grid">
-            <!-- Card 1 -->
+            <!-- Blog/Video Card 1 -->
             <div class="card">
-                <span class="card-tag">Popular</span>
+                <span class="card-tag">New Video</span>
                 <div>
-                    <h3>Ultimate Gameplay Config</h3>
-                    <p>Optimized personal sensitivity curves, control layout maps, and advanced settings profiles.</p>
+                    <h3>Ultimate Gameplay Guide & Settings</h3>
+                    <p>Deep-dive breakdown of the latest upload with matching configuration mirrors on MediaFire & Google Drive.</p>
                 </div>
                 <div class="card-footer">
-                    <span class="file-meta">v2.5 &bull; Updated recently</span>
-                    <a href="downloads.html" class="btn-download">Get File</a>
+                    <span class="file-meta">Published Today</span>
+                    <!-- Link to a dedicated page for this specific video/blog post e.g., video-1.html -->
+                    <a href="video-1.html" class="btn-card-link">Watch & Read</a>
                 </div>
             </div>
 
-            <!-- Card 2 -->
+            <!-- Blog/Video Card 2 -->
+            <div class="card">
+                <span class="card-tag">Patch Notes</span>
+                <div>
+                    <h3>Optimizing FPS & Reducing Lag</h3>
+                    <p>Read the step-by-step breakdown guide on how to configure your device for peak competitive stability.</p>
+                </div>
+                <div class="card-footer">
+                    <span class="file-meta">Blog Article</span>
+                    <!-- Link to a dedicated blog post page e.g., blog-post-1.html -->
+                    <a href="blog-post-1.html" class="btn-card-link">Read Article</a>
+                </div>
+            </div>
+
+            <!-- Blog/Video Card 3 -->
             <div class="card">
                 <span class="card-tag">Pro Setup</span>
                 <div>
-                    <h3>Custom HUD Overlay Pack</h3>
-                    <p>The exact minimalist screen interface layout used for clean visibility during high-tier matches.</p>
+                    <h3>Custom HUD Layout Reveal</h3>
+                    <p>Everything you need to know about setting up clean interface visibility for high-tier matches.</p>
                 </div>
                 <div class="card-footer">
-                    <span class="file-meta">v1.8 &bull; Stable</span>
-                    <a href="downloads.html" class="btn-download">Get File</a>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <span class="card-tag">Essential</span>
-                <div>
-                    <h3>Performance Boost Package</h3>
-                    <p>Tweaked configuration files built to reduce latency and clear frame drops on mobile and PC setups.</p>
-                </div>
-                <div class="card-footer">
-                    <span class="file-meta">v3.0 &bull; Latest Patch</span>
-                    <a href="downloads.html" class="btn-download">Get File</a>
+                    <span class="file-meta">Video Breakdown</span>
+                    <!-- Link to another dedicated video page e.g., video-2.html -->
+                    <a href="video-2.html" class="btn-card-link">Watch & Read</a>
                 </div>
             </div>
         </div>
@@ -453,6 +457,7 @@
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="downloads.html">Downloads</a>
+                <a href="blog.html">Blog</a>
                 <a href="https://www.youtube.com/@doggy69ff" target="_blank">YouTube</a>
             </div>
         </div>
