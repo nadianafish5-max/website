@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official Creator Portal for Doggy69YT. Watch the latest YouTube videos, blog breakdowns, and custom game configurations.">
+    <title>Doggy69YT | Official Creator Portal</title>
+    <style>
+        :root {
+            --bg-deep: #05070a;
+            --bg-surface: #0f1420;
+            --bg-card: #151b2b;
+            --accent: #ff2a5f;
+            --accent-glow: rgba(255, 42, 95, 0.3);
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --border: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Top Notification Bar */
+        .announcement-bar {
+            background: linear-gradient(90deg, #ff2a5f, #ff7043);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(255, 42, 95, 0.2);
+        }
+
+        .announcement-bar a {
+            color: #fff;
+            text-decoration: underline;
+            margin-left: 8px;
+        }
+
+        /* Navigation Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(5, 7, 10, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+        }
+
+        .brand-name span {
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            background-color: var(--accent);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px var(--accent-glow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 80px 8% 40px 8%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center top, rgba(255, 42, 95, 0.08) 0%, transparent 70%);
+        }
+
+        .hero-badge {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            max-width: 800px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent), #ff9800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        /* Embedded YouTube Video Showcase Section */
+        .video-container {
+            max-width: 1000px;
+            margin: 10px auto 40px auto;
+            padding: 0 8%;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Suggestions Section */
+        .suggestions-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 8%;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .suggestions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .suggestion-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .suggestion-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .suggestion-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .suggestion-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .suggestion-link {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .suggestion-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-surface);
+            border-top: 1px solid var(--border);
+            padding: 60px 8% 40px 8%;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            header { padding: 15px 5%; }
+            nav { display: none; }
+            .hero { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Notification Bar -->
+    <div class="announcement-bar">
+        ⚡ NEW VIDEO OUT NOW! Check out the dedicated page for the latest drop. <a href="video-1.html">Watch & Download &rarr;</a>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header>
+        <a href="index.html" class="brand">
+            <img src="https://yt3.googleusercontent.com/XRFscfHwCIgMUGuuabq-YHu4_bEd8XFdkuVm2Jv4fHw7Gyryx2z0zxeFumEW7RSBbHM5gbwdlg=s160-c-k-c0x00ffffff-no-rj" alt="Doggy69YT Logo" class="brand-logo-img">
+            <div class="brand-name">DOGGY<span>69YT</span></div>
+        </a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="https://www.youtube.com/@doggy69ff" target="_blank" class="nav-cta">YouTube Channel</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">
+            <span>🔥</span> Official Creator Hub
+        </div>
+        <h1>Welcome to <span>Doggy69YT</span></h1>
+        <p>Catch the latest gameplay uploads, dedicated video breakdowns, and direct file downloads.</p>
+    </section>
+
+    <!-- Embedded Featured YouTube Video Showcase -->
+    <div class="video-container">
+        <div class="video-wrapper">
+            <!-- Replace 'YOUR_VIDEO_ID' with your primary featured YouTube video ID -->
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Doggy69YT Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Suggested Video & Blog Pages Section -->
+    <section class="suggestions-section">
+        <h2 class="section-title">Latest Video Breakdowns</h2>
+        <p class="section-subtitle">Search through your favorite gameplay guides and configs.</p>
+        
+        <!-- SEARCH INPUT -->
+        <input type="text" id="searchInput" onkeyup="searchVideos()" placeholder="Search videos by title or keyword..." 
+               style="width: 100%; padding: 15px; margin-bottom: 30px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; color: white; outline: none;">
+
+        <div class="suggestions-grid" id="videoGrid">
+            <!-- Suggestion Card 1 -->
+            <div class="suggestion-card">
+                <div>
+                    <h3>Ultimate Gameplay Guide</h3>
+                    <p>Deep-dive breakdown of the latest upload with configuration mirrors.</p>
+                </div>
+                <a href="video-1.html" class="suggestion-link">Watch & Download &rarr;</a>
+            </div>
+
+            <!-- Suggestion Card 2 -->
+            <div class="suggestion-card">
+                <div>
+                    <h3>Pro HUD Setup Reveal</h3>
+                    <p>Everything you need to know about setting up clean interface visibility.</p>
+                </div>
+                <a href="video-2.html" class="suggestion-link">Watch & Download &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SEARCH LOGIC -->
+    <script>
+    function searchVideos() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let grid = document.getElementById('videoGrid');
+        let cards = grid.getElementsByClassName('suggestion-card');
+
+        for (let i = 0; i < cards.length; i++) {
+            let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+            if (title.indexOf(input) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="brand" style="text-decoration: none;">
+                <img src="https://yt3.googleusercontent.com/XRFscfHwCIgMUGuuabq-YHu4_bEd8XFdkuVm2Jv4fHw7Gyryx2z0zxeFumEW7RSBbHM5gbwdlg=s160-c-k-c0x00ffffff-no-rj" alt="Doggy69YT Logo" class="brand-logo-img" style="width: 32px; height: 32px;">
+                <div class="brand-name" style="font-size: 1.1rem;">DOGGY<span>69YT</span></div>
+            </a>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="https://www.youtube.com/@doggy69ff" target="_blank">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Doggy69YT. All Rights Reserved. Built for the community.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
