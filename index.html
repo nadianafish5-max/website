@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official Creator Portal for Doggy69YT. Watch the latest YouTube videos and connect with the community.">
+    <meta name="description" content="Official Creator Portal for Doggy69YT. Watch the latest YouTube videos, blog breakdowns, and custom game configurations.">
     <title>Doggy69YT | Official Creator Portal</title>
     <style>
         :root {
@@ -125,7 +125,7 @@
         /* Hero Section */
         .hero {
             position: relative;
-            padding: 80px 8% 60px 8%;
+            padding: 80px 8% 40px 8%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -166,13 +166,13 @@
             font-size: 1.15rem;
             color: var(--text-secondary);
             max-width: 600px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         /* Embedded YouTube Video Showcase Section */
         .video-container {
             max-width: 1000px;
-            margin: 20px auto 60px auto;
+            margin: 10px auto 40px auto;
             padding: 0 8%;
         }
 
@@ -194,6 +194,75 @@
             width: 100%;
             height: 100%;
             border: 0;
+        }
+
+        /* Suggestions / Latest Video Pages Grid Section */
+        .suggestions-section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 8%;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .suggestions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .suggestion-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .suggestion-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .suggestion-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .suggestion-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .suggestion-link {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .suggestion-link:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
@@ -249,18 +318,18 @@
 
     <!-- Notification Bar -->
     <div class="announcement-bar">
-        ⚡ Welcome to Doggy69YT Official Website! <a href="https://www.youtube.com/@doggy69yt" target="_blank">Subscribe on YouTube &rarr;</a>
+        ⚡ NEW VIDEO OUT NOW! Check out the dedicated page for the latest drop. <a href="video-1.html">Watch & Download &rarr;</a>
     </div>
 
-    <!-- Main Navigation Bar -->
+    <!-- Main Navigation Header -->
     <header>
         <a href="index.html" class="brand">
-            <img src="https://yt3.googleusercontent.com/XRFscfHwCIgMUGuuabq-YHu4_bEd8XFdkuVm2Jv4fHw7Gyryx2z0zxeFumEW7RSBbHM5gbwdlg=s160-c-k-c0x00ffffff-no-rj" alt="Doggy69ff Logo" class="brand-logo-img">
+            <img src="https://yt3.googleusercontent.com/XRFscfHwCIgMUGuuabq-YHu4_bEd8XFdkuVm2Jv4fHw7Gyryx2z0zxeFumEW7RSBbHM5gbwdlg=s160-c-k-c0x00ffffff-no-rj" alt="Doggy69YT Logo" class="brand-logo-img">
             <div class="brand-name">DOGGY<span>69YT</span></div>
         </a>
         <nav>
             <a href="index.html" class="active">Home</a>
-            <a href="https://www.youtube.com/@doggy69yt" target="_blank" class="nav-cta">YouTube Channel</a>
+            <a href="https://www.youtube.com/@doggy69ff" target="_blank" class="nav-cta">YouTube Channel</a>
         </nav>
     </header>
 
@@ -270,31 +339,57 @@
             <span>🔥</span> Official Creator Hub
         </div>
         <h1>Welcome to <span>Doggy69YT</span></h1>
-        <p>Catch the latest gameplay uploads, highlights, and content directly from the channel.</p>
+        <p>Catch the latest gameplay uploads, dedicated video breakdowns, and direct file downloads.</p>
     </section>
 
     <!-- Embedded Featured YouTube Video Showcase -->
     <div class="video-container">
         <div class="video-wrapper">
             <!-- Replace 'YOUR_VIDEO_ID' with your primary featured YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Doggy69ff Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Doggy69YT Featured Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
+
+    <!-- Suggested Video & Blog Pages Section -->
+    <section class="suggestions-section">
+        <h2 class="section-title">Latest Video Breakdowns</h2>
+        <p class="section-subtitle">Explore individual video pages complete with blog notes and configuration mirrors.</p>
+        
+        <div class="suggestions-grid">
+            <!-- Suggestion Card 1 (Duplicate this card block when you add new pages) -->
+            <div class="suggestion-card">
+                <div>
+                    <h3>Latest Upload Breakdown</h3>
+                    <p>Read the blog notes, find tips, and grab the MediaFire or Google Drive files for this release.</p>
+                </div>
+                <a href="video-1.html" class="suggestion-link">Watch & Download &rarr;</a>
+            </div>
+
+            <!-- Example placeholder for a second video page -->
+            <div class="suggestion-card">
+                <div>
+                    <h3>Previous Gameplay Setup</h3>
+                    <p>Check out the previous video patch notes and custom interface settings profile.</p>
+                </div>
+                <a href="video-2.html" class="suggestion-link">Watch & Download &rarr;</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <a href="index.html" class="brand" style="text-decoration: none;">
-                <img src="https://yt3.googleusercontent.com/XRFscfHwCIgMUGuuabq-YHu4_bEd8XFdkuVm2Jv4fHw7Gyryx2z0zxeFumEW7RSBbHM5gbwdlg=s160-c-k-c0x00ffffff-no-rj" alt="Doggy69ff Logo" class="brand-logo-img" style="width: 32px; height: 32px;">
+                <img src="https://yt3.googleusercontent.com/XRFscfHwCIgMUGuuabq-YHu4_bEd8XFdkuVm2Jv4fHw7Gyryx2z0zxeFumEW7RSBbHM5gbwdlg=s160-c-k-c0x00ffffff-no-rj" alt="Doggy69YT Logo" class="brand-logo-img" style="width: 32px; height: 32px;">
                 <div class="brand-name" style="font-size: 1.1rem;">DOGGY<span>69YT</span></div>
             </a>
             <div class="footer-links">
                 <a href="index.html">Home</a>
-                <a href="https://www.youtube.com/@doggy69yt" target="_blank">YouTube</a>
+                <a href="https://www.youtube.com/@doggy69ff" target="_blank">YouTube</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Doggy69YT. All Rights Reserved.</p>
+            <p>&copy; 2026 Doggy69YT. All Rights Reserved. Built for the community.</p>
         </div>
     </footer>
 
