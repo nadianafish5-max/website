@@ -3,68 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How to play Free Fire on Linux PC using emulators and compatibility layers by Doggy69YT.">
-    <title>How to Play Free Fire on Linux | Doggy69YT</title>
+    <title>Freefire Linux | Doggy69YT</title>
     <style>
-        :root { 
-            --bg-deep: #05070a; 
-            --bg-surface: #0f1420; 
-            --bg-card: #151b2b; 
-            --accent: #ff2a5f; 
-            --text-primary: #ffffff; 
-            --text-secondary: #94a3b8; 
-            --border: #1e293b; 
-        }
+        :root { --bg: #05070a; --card: #0f1420; --accent: #ff2a5f; --text: #ffffff; --muted: #94a3b8; --border: #1e293b; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-deep); color: var(--text-primary); line-height: 1.6; }
-        header { padding: 20px 8%; background: rgba(5, 7, 10, 0.85); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-        .brand { font-size: 1.3rem; font-weight: 800; color: white; text-decoration: none; }
+        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding-bottom: 60px; }
+        header { padding: 20px 8%; background: rgba(5,7,10,0.9); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.2rem; font-weight: 800; color: white; text-decoration: none; }
         .brand span { color: var(--accent); }
-        .container { max-width: 900px; margin: 40px auto; padding: 0 8%; }
-        h1 { font-size: 2.2rem; font-weight: 900; margin-bottom: 15px; }
-        p { color: var(--text-secondary); margin-bottom: 25px; font-size: 1.05rem; }
-        .steps-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 25px; margin-bottom: 30px; }
-        .steps-box h3 { color: var(--text-primary); margin-bottom: 15px; font-size: 1.3rem; }
-        .steps-box ol { margin-left: 20px; color: var(--text-secondary); }
-        .steps-box li { margin-bottom: 10px; }
-        .cta-group { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
-        .btn-youtube { background-color: #ff0000; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; display: inline-block; }
-        .download-btn { display: inline-block; background-color: var(--accent); color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; box-shadow: 0 4px 15px rgba(255, 42, 95, 0.3); }
-        footer { background: var(--bg-surface); padding: 40px 8%; text-align: center; color: var(--text-secondary); margin-top: 80px; border-top: 1px solid var(--border); }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 8%; }
+        h1 { font-size: 2.2rem; margin-bottom: 15px; color: white; }
+        h1 span { color: var(--accent); }
+        p { color: var(--muted); margin-bottom: 20px; }
+        .content-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; margin-top: 20px; }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 20px; }
+        .btn:hover { opacity: 0.9; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: var(--muted); text-decoration: none; }
+        .back-link:hover { color: white; }
     </style>
 </head>
 <body>
+
     <header>
         <a href="index.html" class="brand">DOGGY<span>69YT</span></a>
-        <a href="index.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600;">&larr; Back to Home</a>
+        <a href="https://www.youtube.com/@doggy69ff" target="_blank" style="background: var(--accent); color: white; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">YouTube</a>
     </header>
-    
+
     <div class="container">
-        <h1>How to Play Free Fire on Linux PC (Complete Guide)</h1>
-        <p>Running Free Fire on a Linux distribution can be tricky, but with the right setup, you can get smooth gameplay and clean keybindings. Watch the full tutorial on YouTube or grab the files below.</p>
+        <a href="index.html" class="back-link">&larr; Back to all guides</a>
+        
+        <h1>Freefire <span>Linux</span> Setup Guide</h1>
+        <p>Complete configuration and files for running Free Fire on Linux environments.</p>
 
-        <div class="steps-box">
-            <h3>Quick Setup Overview</h3>
-            <ol>
-                <li>Make sure your Linux system supports virtualization (VT-X enabled in BIOS).</li>
-                <li>Set up an Android emulation layer or compatible container designed for Linux architectures.Check the download link for required files.</li>
-                <li>Install the Free Fire APK package.</li>
-                <li>Use the low resolution and low graphics setting if you have a low end pc or laptop</li>
-                <li>Note** Use atleast 3GB of RAM for better performance,use 60 fps for better performance.</li>
-            </ol>
-        </div>
-
-        <div class="cta-group">
-            <!-- Link to your actual YouTube video -->
-            <a href="YOUR_YOUTUBE_VIDEO_LINK" target="_blank" class="btn-youtube">▶ Watch Video on YouTube</a>
+        <div class="content-box">
+            <h3 style="margin-bottom: 15px; color: white;">Guide & Instructions</h3>
+            <p>Follow the video tutorial on our YouTube channel to properly configure your system dependencies, drivers, and package settings before hitting download below.</p>
             
-            <!-- Link to your monetized link shortener / download -->
-            <a href="YOUR_SHORTENED_DOWNLOAD_LINK" target="_blank" class="download-btn">Download Linux Scripts & Files &rarr;</a>
+            <h3 style="margin: 25px 0 15px; color: white;">Downloads</h3>
+            <p>Click below to access the necessary files.</p>
+            
+            <!-- Replace the href '#' with your direct link or download link -->
+            <a href="#" class="btn" target="_blank">Download Files &rarr;</a>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Doggy69YT. All Rights Reserved.</p>
-    </footer>
+    <!-- Monetag Ad Script -->
+    <script src="https://quge5.com/88/tag.min.js" data-zone="271787" async data-cfasync="false"></script>
+
 </body>
 </html>
