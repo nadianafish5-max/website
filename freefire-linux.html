@@ -11,12 +11,18 @@
         header { padding: 20px 8%; background: rgba(5,7,10,0.9); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .brand { font-size: 1.2rem; font-weight: 800; color: white; text-decoration: none; }
         .brand span { color: var(--accent); }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 8%; }
-        h1 { font-size: 2.2rem; margin-bottom: 15px; color: white; }
+        .container { max-width: 850px; margin: 40px auto; padding: 0 8%; }
+        h1 { font-size: 2.2rem; margin-bottom: 10px; color: white; }
         h1 span { color: var(--accent); }
         p { color: var(--muted); margin-bottom: 20px; }
         .content-box { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 30px; margin-top: 20px; }
-        .btn { display: inline-block; background: var(--accent); color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 20px; }
+        .steps { margin: 20px 0; padding-left: 20px; color: var(--muted); }
+        .steps li { margin-bottom: 10px; }
+        .steps strong { color: white; }
+        .file-item { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 10px; }
+        .file-info h4 { color: white; font-size: 1.05rem; margin-bottom: 4px; }
+        .file-info p { font-size: 0.85rem; margin: 0; color: var(--muted); }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-align: center; cursor: pointer; border: none; }
         .btn:hover { opacity: 0.9; }
         .back-link { display: inline-block; margin-bottom: 20px; color: var(--muted); text-decoration: none; }
         .back-link:hover { color: white; }
@@ -33,17 +39,60 @@
         <a href="index.html" class="back-link">&larr; Back to all guides</a>
         
         <h1>Freefire <span>Linux</span> Setup Guide</h1>
-        <p>Complete configuration and files for running Free Fire on Linux environments.</p>
+        <p>Complete configuration files, scripts, and instructions for running Free Fire smoothly on Linux distributions.</p>
 
+        <!-- Description & Installation Process -->
         <div class="content-box">
-            <h3 style="margin-bottom: 15px; color: white;">Guide & Instructions</h3>
-            <p>Follow the video tutorial on our YouTube channel to properly configure your system dependencies, drivers, and package settings before hitting download below.</p>
+            <h3 style="margin-bottom: 15px; color: white;">📋 Installation Guide & Requirements</h3>
+            <p>Follow these quick steps to get everything configured properly on your Linux machine:</p>
             
-            <h3 style="margin: 25px 0 15px; color: white;">Downloads</h3>
-            <p>Click below to access the necessary files.</p>
-            
-            <!-- Replace the href '#' with your direct link or download link -->
-            <a href="#" class="btn" target="_blank">Download Files &rarr;</a>
+            <ol class="steps">
+                <li><strong>Step 1:</strong> Make sure your system graphics drivers (NVIDIA/AMD/Intel) are fully up to date.</li>
+                <li><strong>Step 2:</strong> Download all 4 required files listed below to your computer.</li>
+                <li><strong>Step 3:</strong> Extract or place the configuration files into your working directory as shown in our YouTube tutorial.</li>
+                <li><strong>Step 4:</strong> Run the setup script via your terminal and launch the game!</li>
+            </ol>
+        </div>
+
+        <!-- 4 Download Files Section -->
+        <div class="content-box">
+            <h3 style="margin-bottom: 20px; color: white;">📥 Required Download Files</h3>
+
+            <!-- File 1 -->
+            <div class="file-item">
+                <div class="file-info">
+                    <h4>1. Main Engine Config Package</h4>
+                    <p>Core setup configurations (.zip)</p>
+                </div>
+                <a href="YOUR_MONETAG_DIRECT_LINK_HERE" class="btn" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_STORAGE_LINK_HERE_1'; }, 800);">Download File 1 &rarr;</a>
+            </div>
+
+            <!-- File 2 -->
+            <div class="file-item">
+                <div class="file-info">
+                    <h4>2. Graphics & Driver Patch</h4>
+                    <p>Optimized rendering profile</p>
+                </div>
+                <a href="YOUR_MONETAG_DIRECT_LINK_HERE" class="btn" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_STORAGE_LINK_HERE_2'; }, 800);">Download File 2 &rarr;</a>
+            </div>
+
+            <!-- File 3 -->
+            <div class="file-item">
+                <div class="file-info">
+                    <h4>3. Control Mapping Script</h4>
+                    <p>Keybindings and input configs</p>
+                </div>
+                <a href="YOUR_MONETAG_DIRECT_LINK_HERE" class="btn" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_STORAGE_LINK_HERE_3'; }, 800);">Download File 3 &rarr;</a>
+            </div>
+
+            <!-- File 4 -->
+            <div class="file-item">
+                <div class="file-info">
+                    <h4>4. Dependencies & Runtime Fixes</h4>
+                    <p>Required libraries for stability</p>
+                </div>
+                <a href="YOUR_MONETAG_DIRECT_LINK_HERE" class="btn" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_STORAGE_LINK_HERE_4'; }, 800);">Download File 4 &rarr;</a>
+            </div>
         </div>
     </div>
 
