@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panda Mouse Pro Cracked + Macro | Doggy69YT</title>
+    <title>Doggy69YT | Premium Gaming Setups & Files</title>
     <style>
         :root {
             --bg: #05070a;
@@ -26,10 +26,10 @@
             background: var(--bg); 
             color: var(--text); 
             line-height: 1.6; 
-            padding-bottom: 60px;
+            min-height: 100vh;
             background-image: 
-                radial-gradient(circle at 50% 0%, rgba(255, 42, 95, 0.15) 0%, transparent 45%),
-                radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 40%);
+                radial-gradient(circle at 15% 15%, rgba(255, 42, 95, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.06) 0%, transparent 40%);
         }
 
         header { 
@@ -39,7 +39,7 @@
             border-bottom: 1px solid var(--border); 
             display: flex; 
             justify-content: space-between; 
-            align-items: center;
+            align-items: center; 
             position: sticky;
             top: 0;
             z-index: 100;
@@ -49,7 +49,7 @@
         .yt-btn {
             background: linear-gradient(135deg, #ff2a5f 0%, #d61b47 100%);
             color: white; 
-            padding: 8px 18px; 
+            padding: 9px 20px; 
             border-radius: 8px; 
             text-decoration: none; 
             font-weight: 700; 
@@ -59,142 +59,156 @@
         }
         .yt-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 42, 95, 0.6); }
 
-        .container { max-width: 850px; margin: 30px auto; padding: 0 6%; }
-        .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; color: var(--muted); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: color 0.2s; }
-        .back-link:hover { color: white; }
-
-        .page-header { margin-bottom: 25px; text-align: left; }
-        .badges-row { display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--emerald);
-            border: 1px solid var(--emerald-glow);
-            padding: 4px 12px;
+        .hero { padding: 50px 8% 20px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 42, 95, 0.1);
+            border: 1px solid var(--border-glow);
+            color: var(--accent);
+            padding: 4px 14px;
             border-radius: 20px;
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .hero h1 { font-size: 2.6rem; font-weight: 800; margin-bottom: 12px; }
+        .hero h1 span { color: var(--accent); text-shadow: 0 0 15px var(--accent-glow); }
+        .hero p { color: var(--muted); font-size: 1.05rem; }
+
+        .main { max-width: 1050px; margin: 20px auto 60px; padding: 0 6%; }
+
+        /* 🔥 Newest Uploaded Banner */
+        .latest-recommendation {
+            background: linear-gradient(135deg, rgba(255, 42, 95, 0.15) 0%, rgba(15, 20, 34, 0.9) 100%);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 22px 28px;
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 8px 30px rgba(255, 42, 95, 0.15);
+        }
+        .rec-tag {
+            background: var(--accent);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 800;
             text-transform: uppercase;
         }
-        .badge.hot {
-            background: rgba(255, 42, 95, 0.15);
-            color: var(--accent);
-            border-color: var(--border-glow);
+        .rec-info h3 { font-size: 1.2rem; color: #fff; margin-top: 5px; }
+        .rec-info p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+        .rec-btn {
+            background: var(--emerald);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px var(--emerald-glow);
+            transition: all 0.3s ease;
         }
-        h1 { font-size: 2.3rem; font-weight: 800; margin-bottom: 8px; }
-        h1 span { color: var(--accent); text-shadow: 0 0 15px var(--accent-glow); }
-        .subtitle { color: var(--muted); font-size: 1.05rem; }
+        .rec-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px var(--emerald-glow); }
 
-        /* Monetization / Instruction Notice Box */
-        .notice-card {
-            background: linear-gradient(135deg, rgba(255, 42, 95, 0.1), rgba(15, 20, 34, 0.8));
-            border: 1px solid var(--border-glow);
-            border-radius: 14px;
-            padding: 16px 20px;
-            margin: 20px 0;
+        /* Search Bar */
+        .search-container { margin-bottom: 35px; }
+        #search { 
+            width: 100%; 
+            padding: 16px 22px; 
+            background: var(--card); 
+            border: 1px solid var(--border); 
+            border-radius: 14px; 
+            color: white; 
+            outline: none; 
+            font-size: 1.05rem; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        #search:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            color: #fff;
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 8px;
         }
-        .notice-icon { font-size: 1.6rem; }
-        .notice-text p { color: #e2e8f0; font-size: 0.9rem; line-height: 1.4; }
-        .notice-text strong { color: var(--accent); }
 
-        .content-box { 
+        /* Essential / Featured Grid */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* Auto-Discovered Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+        
+        .card { 
             background: var(--card); 
             border: 1px solid var(--border); 
             border-radius: 16px; 
-            padding: 28px; 
-            margin-top: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        .content-box h3 { font-size: 1.25rem; color: #fff; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
-
-        .steps-list { list-style: none; counter-reset: step-counter; }
-        .steps-list li { 
-            position: relative; 
-            padding-left: 45px; 
-            margin-bottom: 18px; 
-            color: var(--muted); 
-            font-size: 0.95rem;
-        }
-        .steps-list li::before {
-            counter-increment: step-counter;
-            content: counter(step-counter);
-            position: absolute;
-            left: 0; top: 0;
-            width: 28px; height: 28px;
-            background: rgba(255, 42, 95, 0.15);
-            color: var(--accent);
-            border: 1px solid var(--border-glow);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-size: 0.85rem;
-        }
-        .steps-list strong { color: #fff; }
-
-        .file-item { 
-            background: rgba(255,255,255,0.02); 
-            border: 1px solid var(--border); 
-            border-radius: 14px; 
-            padding: 20px 22px; 
+            padding: 24px; 
             display: flex; 
+            flex-direction: column; 
             justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 16px; 
-            flex-wrap: wrap; 
-            gap: 14px;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
-        .file-item:hover { 
-            border-color: var(--border-glow); 
-            background: rgba(255, 255, 255, 0.04);
-            transform: translateY(-2px);
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--emerald));
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .file-info h4 { color: white; font-size: 1.1rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
-        .file-info p { font-size: 0.88rem; color: var(--muted); }
-
-        /* Animated Glowing Download Button */
-        .btn-download { 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 8px;
-            background: linear-gradient(135deg, #ff2a5f 0%, #d61b47 100%); 
-            color: white; 
-            padding: 12px 22px; 
-            border-radius: 10px; 
-            text-decoration: none; 
+        .card:hover { 
+            transform: translateY(-5px); 
+            background: var(--card-hover); 
+            border-color: var(--border-glow);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .card:hover::before { opacity: 1; }
+        
+        .card h3 { font-size: 1.2rem; margin-bottom: 8px; color: #fff; text-transform: capitalize; }
+        .card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5; }
+        .card-link { 
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--accent); 
             font-weight: 700; 
-            font-size: 0.92rem; 
-            cursor: pointer; 
-            border: none; 
-            box-shadow: 0 4px 15px var(--accent-glow);
-            transition: all 0.25 ease;
-            animation: pulse-glow 3s infinite;
+            text-decoration: none; 
+            font-size: 0.92rem;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
         }
-        .btn-download:hover { 
-            transform: translateY(-2px) scale(1.02); 
-            box-shadow: 0 6px 25px rgba(255, 42, 95, 0.75); 
-        }
+        .card-link span { transition: transform 0.2s ease; }
+        .card:hover .card-link span { transform: translateX(5px); }
 
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 4px 15px var(--accent-glow); }
-            50% { box-shadow: 0 4px 25px rgba(255, 42, 95, 0.65); }
-        }
-
-        /* Dedicated Ad Banner Box Placeholder */
-        .ad-container {
-            margin: 25px 0;
-            padding: 15px;
-            background: rgba(255,255,255,0.01);
+        .loading { 
+            text-align: center; 
+            color: var(--muted); 
+            grid-column: 1 / -1; 
+            padding: 40px 20px; 
+            background: var(--card); 
+            border-radius: 14px; 
             border: 1px dashed var(--border);
-            border-radius: 12px;
-            text-align: center;
         }
 
-        footer { text-align: center; margin-top: 50px; color: var(--muted); font-size: 0.85rem; }
+        footer { text-align: center; padding: 40px; color: var(--muted); border-top: 1px solid var(--border); font-size: 0.88rem; }
     </style>
 </head>
 <body>
@@ -204,103 +218,145 @@
         <a href="https://www.youtube.com/@doggy69ff" target="_blank" class="yt-btn">YouTube Channel</a>
     </header>
 
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; Back to all setups</a>
+    <section class="hero">
+        <div class="hero-badge">Official Downloads Hub</div>
+        <h1>Welcome to <span>Doggy69YT</span></h1>
+        <p>Direct download links for verified gaming tools, scripts, and keymap configurations.</p>
+    </section>
+
+    <div class="main">
         
-        <div class="page-header">
-            <div class="badges-row">
-                <span class="badge hot">🔥 Hot Release</span>
-                <span class="badge">✓ Anti-Ban Tested</span>
-                <span class="badge">⚡ Macro Supported</span>
+        <!-- 🔥 Newest Upload Recommendation Banner -->
+        <div id="latest-banner" class="latest-recommendation" style="display: none;">
+            <div class="rec-info">
+                <span class="rec-tag">🔥 Newly Released</span>
+                <h3 id="rec-title">Loading latest guide...</h3>
+                <p>Check out our latest setup files and direct download links.</p>
             </div>
-            <h1>Panda Mouse Pro <span>Cracked + Macro</span></h1>
-            <p class="subtitle">Complete activation kit & custom high-sensitivity macro config for Free Fire.</p>
+            <a id="rec-link" href="#" class="rec-btn">View Latest Setup &rarr;</a>
         </div>
 
-        <!-- Conversion & Support Notice Box -->
-        <div class="notice-card">
-            <div class="notice-icon">💡</div>
-            <div class="notice-text">
-                <p><strong>Download Tip:</strong> Clicking the download button will open our verified sponsor tab. Your Google Drive download will start automatically in <strong>0.8 seconds</strong>!</p>
-            </div>
+        <!-- 🔍 Live Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search" onkeyup="filterPages()" placeholder="🔍 Search among all scripts, guides, and tools...">
         </div>
 
-        <!-- Instructions Section -->
-        <div class="content-box">
-            <h3>📋 Installation Guide</h3>
-            <ul class="steps-list">
-                <li><strong>Step 1:</strong> Download and install the cracked Panda Mouse Pro APK on your Android device.</li>
-                <li><strong>Step 2:</strong> Download the 1-Click Wireless ADB Activator script.</li>
-                <li><strong>Step 3:</strong> Execute the activator script to unlock full mouse and keyboard keymapping features.</li>
-                <li><strong>Step 4:</strong> Load the custom macro sensitivity configuration file and enjoy smooth headshots!</li>
-            </ul>
-        </div>
-
-        <!-- Mid-Page Monetag Native/Banner Ad Slot -->
-        <div class="ad-container">
-            <!-- Paste your Monetag Banner / Native Ad code block here if available -->
-            <script src="https://quge5.com/88/tag.min.js" data-zone="271787" async data-cfasync="false"></script>
-        </div>
-
-        <!-- File Downloads Section -->
-        <div class="content-box">
-            <h3>📥 Required File Downloads</h3>
-
-            <!-- File 1: Panda Mouse Pro APK -->
-            <div class="file-item">
-                <div class="file-info">
-                    <h4>📱 1. Panda Mouse Pro Cracked APK</h4>
-                    <p>Version v3.2 | Full pre-activated version (No key required)</p>
+        <!-- 📌 Essential / Necessary Webpages -->
+        <div class="section-title">📌 Essential Setups</div>
+        <div class="featured-grid">
+            <div class="card">
+                <div>
+                    <h3>Panda Mouse Pro Cracked</h3>
+                    <p>Pre-activated APK with 1-click activation script & custom macro keymap file.</p>
                 </div>
-                <!-- 
-                   MONETAG AD DIRECT LINK: https://omg10.com/4/11619652
-                   REPLACE 'YOUR_PANDA_APK_DRIVE_ID' WITH YOUR ACTUAL GOOGLE DRIVE FILE ID BELOW 
-                -->
-                <a href="https://omg10.com/4/11619652" 
-                   class="btn-download" 
-                   target="_blank" 
-                   onclick="setTimeout(function(){ window.location.href='https://drive.google.com/uc?export=download&id=YOUR_PANDA_APK_DRIVE_ID'; }, 800);">
-                   Download APK &rarr;
-                </a>
+                <a href="panda-mouse-pro.html" class="card-link">Download Setup <span>&rarr;</span></a>
             </div>
-
-            <!-- File 2: Activation Script -->
-            <div class="file-item">
-                <div class="file-info">
-                    <h4>⚡ 2. 1-Click Activation Script</h4>
-                    <p>Instant ADB activation script for Android 11, 12, 13, 14 & PC</p>
+            <div class="card">
+                <div>
+                    <h3>Free Fire Linux Setup</h3>
+                    <p>Complete installation guide & Bliss OS configuration files for low-end PCs.</p>
                 </div>
-                <!-- REPLACE 'YOUR_ACTIVATION_SCRIPT_DRIVE_ID' BELOW -->
-                <a href="https://omg10.com/4/11619652" 
-                   class="btn-download" 
-                   target="_blank" 
-                   onclick="setTimeout(function(){ window.location.href='https://drive.google.com/uc?export=download&id=YOUR_ACTIVATION_SCRIPT_DRIVE_ID'; }, 800);">
-                   Download Script &rarr;
-                </a>
-            </div>
-
-            <!-- File 3: Macro Config -->
-            <div class="file-item">
-                <div class="file-info">
-                    <h4>🎯 3. Headshot Macro Keymap File</h4>
-                    <p>Optimized recoil control & high sensitivity drag profile</p>
-                </div>
-                <!-- REPLACE 'YOUR_MACRO_CONFIG_DRIVE_ID' BELOW -->
-                <a href="https://omg10.com/4/11619652" 
-                   class="btn-download" 
-                   target="_blank" 
-                   onclick="setTimeout(function(){ window.location.href='https://drive.google.com/uc?export=download&id=YOUR_MACRO_CONFIG_DRIVE_ID'; }, 800);">
-                   Download Macro &rarr;
-                </a>
+                <a href="ydk.html" class="card-link">Download Setup <span>&rarr;</span></a>
             </div>
         </div>
+        
+        <!-- 📂 All Uploaded Guides (Auto-Loaded via GitHub API) -->
+        <div class="section-title">📂 All Uploaded Guides</div>
+        <div class="grid" id="grid">
+            <div class="loading">Scanning repository for newly uploaded pages...</div>
+        </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Doggy69YT. Powered by Monetag Ads.</p>
+        <p>&copy; 2026 Doggy69YT. All rights reserved.</p>
     </footer>
 
-    <!-- Monetag Global Smart Script -->
+    <!-- Universal Auto-Discovery & Recommendation Script -->
+    <script>
+        const GITHUB_USER = "nadianafish5-max";
+        const REPO_NAME = "website";
+
+        let allPages = [];
+
+        async function fetchPages() {
+            const grid = document.getElementById('grid');
+            try {
+                let response = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO_NAME}/contents/`);
+                let files = await response.json();
+
+                // Filters out non-HTML files, index, and template files
+                let htmlFiles = files.filter(file => 
+                    file.name.endsWith('.html') && 
+                    file.name !== 'index.html' && 
+                    file.name !== 'video-template.html'
+                );
+
+                if (htmlFiles.length === 0) {
+                    grid.innerHTML = '<div class="loading">No extra guide pages found yet. Upload your HTML files to GitHub to show them here!</div>';
+                    return;
+                }
+
+                // Map files into clean objects
+                allPages = htmlFiles.map(file => {
+                    let cleanTitle = file.name.replace('.html', '').replace(/-/g, ' ');
+                    return {
+                        title: cleanTitle,
+                        url: file.name,
+                        description: `View complete step-by-step setup instructions and download files for ${cleanTitle}.`
+                    };
+                });
+
+                // Display recent recommendation (the last uploaded HTML file)
+                if (htmlFiles.length > 0) {
+                    let latestFile = htmlFiles[htmlFiles.length - 1];
+                    let latestTitle = latestFile.name.replace('.html', '').replace(/-/g, ' ');
+                    
+                    document.getElementById('rec-title').innerText = latestTitle;
+                    document.getElementById('rec-link').href = latestFile.name;
+                    document.getElementById('latest-banner').style.display = 'flex';
+                }
+
+                displayPages(allPages);
+            } catch (err) {
+                console.error("Error loading repository files:", err);
+                grid.innerHTML = '<div class="loading">Could not auto-load pages. Check back shortly.</div>';
+            }
+        }
+
+        function displayPages(pages) {
+            let grid = document.getElementById('grid');
+            grid.innerHTML = '';
+            
+            if (pages.length === 0) {
+                grid.innerHTML = '<div class="loading">No matching guides found for your search.</div>';
+                return;
+            }
+
+            pages.forEach(page => {
+                let card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div>
+                        <h3>${page.title}</h3>
+                        <p>${page.description}</p>
+                    </div>
+                    <a href="${page.url}" class="card-link">View Setup & Files <span>&rarr;</span></a>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterPages() {
+            let query = document.getElementById('search').value.toLowerCase();
+            let filtered = allPages.filter(p => p.title.toLowerCase().includes(query) || p.description.toLowerCase().includes(query));
+            displayPages(filtered);
+        }
+
+        fetchPages();
+    </script>
+
+    <!-- Monetag Smart Script -->
     <script src="https://quge5.com/88/tag.min.js" data-zone="271787" async data-cfasync="false"></script>
 
 </body>
