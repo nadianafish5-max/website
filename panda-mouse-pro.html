@@ -108,50 +108,70 @@
         }
         .steps-list strong { color: #fff; }
 
-        /* Multiple Download Cards Styling */
-        .download-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 16px;
-            margin-top: 10px;
-        }
-
-        .file-item { 
-            background: rgba(255,255,255,0.02); 
-            border: 1px solid var(--border); 
-            border-radius: 14px; 
-            padding: 20px; 
-            display: flex; 
-            flex-direction: column;
-            justify-content: space-between; 
+        /* Multi-Mirror Card Layout */
+        .file-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 18px;
             transition: all 0.3s ease;
         }
-        .file-item:hover { 
+        .file-card:hover {
             border-color: rgba(255, 42, 95, 0.3);
             background: var(--card-hover);
-            transform: translateY(-2px);
         }
-        .file-info h4 { color: white; font-size: 1.05rem; margin-bottom: 6px; }
-        .file-info p { font-size: 0.85rem; color: var(--muted); margin-bottom: 16px; line-height: 1.4; }
+        .file-header {
+            margin-bottom: 14px;
+        }
+        .file-header h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .file-header p {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        /* Buttons Grid Inside Each File Card */
+        .mirror-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
 
         .btn-download { 
             display: inline-flex; 
             align-items: center; 
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             background: linear-gradient(135deg, #ff2a5f 0%, #d61b47 100%); 
             color: white; 
-            padding: 10px 18px; 
+            padding: 10px 14px; 
             border-radius: 8px; 
             text-decoration: none; 
             font-weight: 700; 
-            font-size: 0.88rem; 
+            font-size: 0.85rem; 
             cursor: pointer; 
             border: none; 
             box-shadow: 0 4px 15px var(--accent-glow);
             transition: all 0.2s ease;
         }
         .btn-download:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 42, 95, 0.6); }
+
+        .btn-download.alt-link {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text);
+            box-shadow: none;
+        }
+        .btn-download.alt-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
 
         footer { text-align: center; margin-top: 50px; color: var(--muted); font-size: 0.85rem; }
     </style>
@@ -176,54 +196,55 @@
         <div class="content-box">
             <h3>📖 Installation Instructions</h3>
             <ul class="steps-list">
-                <li><strong>Step 1:</strong> Download and install the cracked APK file on your Android device.</li>
-                <li><strong>Step 2:</strong> Download the Activation Script on your PC or secondary phone.</li>
+                <li><strong>Step 1:</strong> Choose a server below to download and install the cracked APK file on your Android device.</li>
+                <li><strong>Step 2:</strong> Download the Activation Script using any available link mirror.</li>
                 <li><strong>Step 3:</strong> Run the activation script via Wireless ADB or PC to bypass license checks.</li>
                 <li><strong>Step 4:</strong> Load the custom macro configuration file into Panda Mouse Pro and start gaming!</li>
             </ul>
         </div>
 
-        <!-- Multiple File Downloads Box -->
+        <!-- Multiple Download Options per File -->
         <div class="content-box">
             <h3>📥 Required Download Links</h3>
 
-            <div class="download-grid">
-                <!-- File 1: Main APK -->
-                <div class="file-item">
-                    <div class="file-info">
-                        <h4>1. Panda Mouse Pro Cracked APK</h4>
-                        <p>Pre-activated version v2.0.4. No activation key required for supported devices.</p>
-                    </div>
-                    <a href="https://raw.githubusercontent.com/nadianafish5-max/Nothing-new/refs/heads/main/Download%20Files/Necessary%20files/modloader.zip?token=GHSAT0AAAAAAEIYIZHTV7T7UETKWJRHEOEM2VE56IQ" class="btn-download" target="_blank" onclick="setTimeout(function(){ window.location.href='https://raw.githubusercontent.com/nadianafish5-max/Nothing-new/refs/heads/main/Download%20Files/Necessary%20files/modloader.zip?token=GHSAT0AAAAAAEIYIZHTV7T7UETKWJRHEOEM2VE56IQ'; }, 800);">Download APK &rarr;</a>
+            <!-- File 1: Panda Mouse Pro APK -->
+            <div class="file-card">
+                <div class="file-header">
+                    <h4>1. Panda Mouse Pro Cracked APK (v2.0.4)</h4>
+                    <p>Pre-activated package. Choose any mirror below to start downloading:</p>
                 </div>
-
-                <!-- File 2: Activation Script -->
-                <div class="file-item">
-                    <div class="file-info">
-                        <h4>2. 1-Click Activation Script & ADB Tool</h4>
-                        <p>Fast activation tool for PC & Android wireless ADB activation.</p>
-                    </div>
-                    <a href="https://omg10.com/4/11619652" class="btn-download" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_ACTIVATOR_LINK'; }, 800);">Download Script &rarr;</a>
-                </div>
-
-                <!-- File 3: Macro Config File -->
-                <div class="file-item">
-                    <div class="file-info">
-                        <h4>3. Premium Headshot Macro Config</h4>
-                        <p>Optimized keymapper layout and custom drag recoil sensitivity profile.</p>
-                    </div>
-                    <a href="https://omg10.com/4/11619652" class="btn-download" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_MACRO_CONFIG_LINK'; }, 800);">Download Macro &rarr;</a>
-                </div>
-
-                <!-- File 4: Backup Mirror Server -->
-                <div class="file-item">
-                    <div class="file-info">
-                        <h4>4. Backup Mirror Link (All Files)</h4>
-                        <p>Alternative MediaFire folder mirror if the direct drive links above fail.</p>
-                    </div>
-                    <a href="https://omg10.com/4/11619652" class="btn-download" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_BACKUP_MIRROR_LINK'; }, 800);">Download Mirror &rarr;</a>
+                <div class="mirror-buttons">
+                    <a href="https://omg10.com/4/11619652" class="btn-download" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_APK_DRIVE_LINK'; }, 800);">🚀 Server 1 (Drive)</a>
+                    <a href="https://omg10.com/4/11619652" class="btn-download alt-link" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_APK_MEDIAFIRE_LINK'; }, 800);">📁 Server 2 (MediaFire)</a>
+                    <a href="https://omg10.com/4/11619652" class="btn-download alt-link" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_APK_MEGA_LINK'; }, 800);">⚡ Server 3 (Mega)</a>
                 </div>
             </div>
+
+            <!-- File 2: Activation Script -->
+            <div class="file-card">
+                <div class="file-header">
+                    <h4>2. 1-Click Activation Script & ADB Tool</h4>
+                    <p>Windows batch script & wireless ADB tools for fast device activation:</p>
+                </div>
+                <div class="mirror-buttons">
+                    <a href="https://omg10.com/4/11619652" class="btn-download" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_SCRIPT_DRIVE_LINK'; }, 800);">🚀 Server 1 (Drive)</a>
+                    <a href="https://omg10.com/4/11619652" class="btn-download alt-link" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_SCRIPT_MEDIAFIRE_LINK'; }, 800);">📁 Server 2 (MediaFire)</a>
+                    <a href="https://omg10.com/4/11619652" class="btn-download alt-link" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_SCRIPT_DIRECT_LINK'; }, 800);">⚡ Server 3 (Direct)</a>
+                </div>
+            </div>
+
+            <!-- File 3: Headshot Macro Config -->
+            <div class="file-card">
+                <div class="file-header">
+                    <h4>3. Premium Headshot Macro Config</h4>
+                    <p>Optimized keymapper preset and drag recoil sensitivity file:</p>
+                </div>
+                <div class="mirror-buttons">
+                    <a href="https://omg10.com/4/11619652" class="btn-download" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_MACRO_DRIVE_LINK'; }, 800);">🚀 Server 1 (Drive)</a>
+                    <a href="https://omg10.com/4/11619652" class="btn-download alt-link" target="_blank" onclick="setTimeout(function(){ window.location.href='YOUR_MACRO_MEDIAFIRE_LINK'; }, 800);">📁 Server 2 (MediaFire)</a>
+                </div>
+            </div>
+
         </div>
     </div>
 
