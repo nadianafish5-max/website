@@ -80,7 +80,7 @@
 
         .main { max-width: 1050px; margin: 20px auto 60px; padding: 0 6%; }
 
-        /* 🔥 Dynamic Highlights Section (2 Separate Columns) */
+        /* Highlights Grid */
         .highlights-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -100,10 +100,8 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
         .highlight-card.new { border-color: rgba(255, 42, 95, 0.3); }
         .highlight-card.rec { border-color: rgba(245, 158, 11, 0.3); }
-
         .highlight-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
 
         .tag-row { margin-bottom: 12px; }
@@ -137,7 +135,7 @@
         .btn-card.rec-btn { background: var(--amber); color: #000; box-shadow: 0 4px 15px var(--amber-glow); }
         .btn-card:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        /* Search Bar */
+        /* Search Bar & Stats */
         .search-container { margin-bottom: 35px; }
         #search { 
             width: 100%; 
@@ -152,6 +150,7 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
         #search:focus { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
+        .search-stats { font-size: 0.85rem; color: var(--muted); margin-top: 8px; margin-left: 5px; }
 
         .section-title {
             font-size: 1.25rem;
@@ -246,22 +245,19 @@
 
     <div class="main">
         
-        <!-- 🔥 Separate Highlight Cards: Newly Released vs Recommended -->
+        <!-- 🔥 Highlights: Newly Released vs Recommended -->
         <div class="highlights-container">
-            
-            <!-- 1. Newly Released Card (Auto-detected) -->
             <div class="highlight-card new">
                 <div>
                     <div class="tag-row">
                         <span class="tag new-tag">🔥 Newly Released</span>
                     </div>
                     <h3 id="new-title">Scanning for latest update...</h3>
-                    <p id="new-desc">The newest uploaded setup and file links will show here automatically.</p>
+                    <p id="new-desc">The newest uploaded setup guide will show here automatically.</p>
                 </div>
                 <a id="new-link" href="#" class="btn-card new-btn">Check New Release &rarr;</a>
             </div>
 
-            <!-- 2. Recommended Card (Customizable) -->
             <div class="highlight-card rec">
                 <div>
                     <div class="tag-row">
@@ -272,12 +268,12 @@
                 </div>
                 <a id="rec-link" href="panda-mouse-pro.html" class="btn-card rec-btn">View Recommended &rarr;</a>
             </div>
-
         </div>
 
-        <!-- 🔍 Live Search Bar -->
+        <!-- 🔍 Advanced Topic Search Bar -->
         <div class="search-container">
-            <input type="text" id="search" onkeyup="filterPages()" placeholder="🔍 Search among all scripts, guides, and tools...">
+            <input type="text" id="search" onkeyup="filterPages()" placeholder="🔍 Search topics (e.g., Panda, Linux, Macro, APK, Bliss OS, Sensitivity)...">
+            <div class="search-stats" id="search-stats">Index loaded. Type to search all webpage contents.</div>
         </div>
 
         <!-- 📌 Essential / Necessary Webpages -->
@@ -299,10 +295,10 @@
             </div>
         </div>
         
-        <!-- 📂 All Uploaded Guides (Auto-Loaded via GitHub API) -->
-        <div class="section-title">📂 All Uploaded Guides</div>
+        <!-- 📂 All Uploaded Guides -->
+        <div class="section-title">📂 All Webpages & Guides</div>
         <div class="grid" id="grid">
-            <div class="loading">Scanning repository for uploaded pages...</div>
+            <div class="loading">Indexing content from all uploaded pages...</div>
         </div>
 
     </div>
@@ -311,13 +307,10 @@
         <p>&copy; 2026 Doggy69YT. All rights reserved.</p>
     </footer>
 
-    <!-- Universal Auto-Discovery Script -->
+    <!-- Universal Deep-Content Search & Auto-Discovery Script -->
     <script>
         const GITHUB_USER = "nadianafish5-max";
         const REPO_NAME = "website";
-
-        // CHANGE THIS FILE NAME LATER WHEN YOU WANT TO CHANGE THE RECOMMENDED CARD:
-        let RECOMMENDED_PAGE_FILE = "panda-mouse-pro.html";
 
         let allPages = [];
 
@@ -327,7 +320,6 @@
                 let response = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${REPO_NAME}/contents/`);
                 let files = await response.json();
 
-                // Filters out non-HTML files, index, and template files
                 let htmlFiles = files.filter(file => 
                     file.name.endsWith('.html') && 
                     file.name !== 'index.html' && 
@@ -339,25 +331,42 @@
                     return;
                 }
 
-                allPages = htmlFiles.map(file => {
+                // Deep scan: Fetch full HTML text for each page to enable topic searching
+                allPages = await Promise.all(htmlFiles.map(async file => {
+                    let pageContent = "";
                     let cleanTitle = file.name.replace('.html', '').replace(/-/g, ' ');
+
+                    try {
+                        let res = await fetch(file.name);
+                        let text = await res.text();
+                        // Strip HTML tags to extract raw plain text for searching
+                        let doc = new DOMParser().parseFromString(text, 'text/html');
+                        pageContent = doc.body ? doc.body.innerText.toLowerCase() : text.toLowerCase();
+                        
+                        // Grab h1 or title tag if available for better display
+                        let pageHeading = doc.querySelector('h1') ? doc.querySelector('h1').innerText : cleanTitle;
+                        cleanTitle = pageHeading;
+                    } catch(e) {
+                        pageContent = cleanTitle.toLowerCase();
+                    }
+
                     return {
                         title: cleanTitle,
                         url: file.name,
-                        description: `View complete step-by-step setup instructions and download files for ${cleanTitle}.`
+                        fullContent: pageContent,
+                        description: `Step-by-step guide and direct download links for ${cleanTitle}.`
                     };
-                });
+                }));
 
-                // Set Newly Released Card (The very last uploaded file in repository)
+                // Set Newly Released Card (The last uploaded file in repository)
                 if (htmlFiles.length > 0) {
-                    let latestFile = htmlFiles[htmlFiles.length - 1];
-                    let latestTitle = latestFile.name.replace('.html', '').replace(/-/g, ' ');
-                    
-                    document.getElementById('new-title').innerText = latestTitle;
-                    document.getElementById('new-desc').innerText = `Latest uploaded guide. Access download files for ${latestTitle}.`;
-                    document.getElementById('new-link').href = latestFile.name;
+                    let latestFile = allPages[allPages.length - 1];
+                    document.getElementById('new-title').innerText = latestFile.title;
+                    document.getElementById('new-desc').innerText = `Latest uploaded guide. Access setup files for ${latestFile.title}.`;
+                    document.getElementById('new-link').href = latestFile.url;
                 }
 
+                document.getElementById('search-stats').innerText = `Successfully indexed ${allPages.length} pages and topics.`;
                 displayPages(allPages);
             } catch (err) {
                 console.error("Error loading repository files:", err);
@@ -370,7 +379,7 @@
             grid.innerHTML = '';
             
             if (pages.length === 0) {
-                grid.innerHTML = '<div class="loading">No matching guides found for your search.</div>';
+                grid.innerHTML = '<div class="loading">No guides match your search topic. Try keywords like "Macro", "APK", "Linux", or "Panda".</div>';
                 return;
             }
 
@@ -389,8 +398,21 @@
         }
 
         function filterPages() {
-            let query = document.getElementById('search').value.toLowerCase();
-            let filtered = allPages.filter(p => p.title.toLowerCase().includes(query) || p.description.toLowerCase().includes(query));
+            let query = document.getElementById('search').value.toLowerCase().trim();
+            if (!query) {
+                displayPages(allPages);
+                document.getElementById('search-stats').innerText = `Showing all ${allPages.length} pages.`;
+                return;
+            }
+
+            // Search across title, URL, AND full inner page text/topics
+            let filtered = allPages.filter(p => 
+                p.title.toLowerCase().includes(query) || 
+                p.url.toLowerCase().includes(query) || 
+                p.fullContent.includes(query)
+            );
+
+            document.getElementById('search-stats').innerText = `Found ${filtered.length} matching page(s) for "${query}".`;
             displayPages(filtered);
         }
 
